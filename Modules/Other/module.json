@@ -1,0 +1,13 @@
+{
+    "name": "Other",
+    "alias": "other",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Other\\Providers\\OtherServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

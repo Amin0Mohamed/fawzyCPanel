@@ -1,0 +1,13 @@
+{
+    "name": "Faculty",
+    "alias": "faculty",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Faculty\\Providers\\FacultyServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,11 @@
+{
+    "Common": true,
+    "Admin": true,
+    "User": true,
+    "Program": true,
+    "MainProgram": true,
+    "Other": true,
+    "Setting": true,
+    "Faculty": true,
+    "WorkShop": true
+}

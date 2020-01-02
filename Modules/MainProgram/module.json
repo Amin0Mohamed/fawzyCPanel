@@ -1,0 +1,13 @@
+{
+    "name": "MainProgram",
+    "alias": "mainprogram",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\MainProgram\\Providers\\MainProgramServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

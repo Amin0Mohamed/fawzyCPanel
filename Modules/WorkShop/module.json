@@ -1,0 +1,13 @@
+{
+    "name": "WorkShop",
+    "alias": "workshop",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\WorkShop\\Providers\\WorkShopServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

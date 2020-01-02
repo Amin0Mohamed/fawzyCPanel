@@ -1,0 +1,356 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "User login and register",
+        "version": "0.1"
+    },
+    "servers": [
+        {
+            "url": "http://165.22.71.144/uears_web/public/api",
+            "description": "Base URL"
+        }
+    ],
+    "paths": {
+        "/display_committee": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\API\\Committee_feedController::display_committee",
+                "responses": {
+                    "200": {
+                        "description": "displays committees and new feeds"
+                    }
+                }
+            }
+        },
+        "/insert_committee": {
+            "post": {
+                "operationId": "App\\Http\\Controllers\\API\\Committee_feedController::insert_committee",
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "title which is committee or new feeds ",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "in": "query",
+                        "description": "body of committee or new feed",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "insert title and body into committee or new feeds"
+                    }
+                }
+            }
+        },
+        "/contactus": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Contact - username",
+                        "required": true
+                    },
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "Contact - user email",
+                        "required": true
+                    },
+                    {
+                        "name": "subject",
+                        "in": "path",
+                        "description": "subject",
+                        "required": true
+                    },
+                    {
+                        "name": "message",
+                        "in": "path",
+                        "description": "your message",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "when required fields is not added the response returns validation error , if the message was sent successfully it will return json success message"
+                    }
+                }
+            }
+        },
+        "/all_exhibitions": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\API\\ExhibitionController::all_exhibitions",
+                "responses": {
+                    "200": {
+                        "description": "Get all Exhibitions"
+                    }
+                }
+            }
+        },
+        "/get_exhibition": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\API\\ExhibitionController::get_exhibition",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "exhibition id",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "get specific exhibition with id"
+                    }
+                }
+            }
+        },
+        "/insert_faculty": {
+            "post": {
+                "operationId": "App\\Http\\Controllers\\API\\FacultyController::insert_faculty",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "faculty name",
+                        "required": true
+                    },
+                    {
+                        "name": "image",
+                        "in": "query",
+                        "description": "image of faculty",
+                        "required": true
+                    },
+                    {
+                        "name": "info",
+                        "in": "query",
+                        "description": "info of faculty",
+                        "required": true
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "description": "faculty description",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "insert faculty with above params"
+                    }
+                }
+            }
+        },
+        "/all_faculities": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\API\\FacultyController::all_faculities",
+                "responses": {
+                    "200": {
+                        "description": "Get all faculties"
+                    }
+                }
+            }
+        },
+        "/get_faculty": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\API\\FacultyController::get_faculty",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "faculty id",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "get one faculty with its id"
+                    }
+                }
+            }
+        },
+        "/insert_into_home": {
+            "post": {
+                "operationId": "App\\Http\\Controllers\\API\\HomeController::insert_into_home",
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "PDF title",
+                        "required": true
+                    },
+                    {
+                        "name": "PDF",
+                        "in": "query",
+                        "description": "PDF File",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "insert title and pdf into home screen"
+                    }
+                }
+            }
+        },
+        "/display_home_details": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\API\\HomeController::display_home_details",
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "PDF title",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "display home details with title param"
+                    }
+                }
+            }
+        },
+        "/display_program": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\API\\MainProgramController::display_program",
+                "parameters": [
+                    {
+                        "name": "program_id",
+                        "in": "query",
+                        "description": "program id",
+                        "required": true
+                    },
+                    {
+                        "name": "session_number",
+                        "in": "query",
+                        "description": "session number",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "display a main program session with its all details"
+                    }
+                }
+            }
+        },
+        "/display_programs": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\API\\ProgramController::display_programs",
+                "parameters": [
+                    {
+                        "name": "day",
+                        "in": "query",
+                        "description": "program day",
+                        "required": true
+                    },
+                    {
+                        "name": "month",
+                        "in": "query",
+                        "description": "program month",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "display all program sessions with brief details"
+                    }
+                }
+            }
+        },
+        "/login": {
+            "post": {
+                "operationId": "App\\Http\\Controllers\\API\\UserController::login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "user registered email",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "user Password",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "login with email and password"
+                    }
+                }
+            }
+        },
+        "/insert_venue": {
+            "post": {
+                "operationId": "App\\Http\\Controllers\\API\\VenueController::insert_venue",
+                "parameters": [
+                    {
+                        "name": "latitude",
+                        "in": "query",
+                        "description": "location latitude",
+                        "required": true
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "query",
+                        "description": "location longitude",
+                        "required": true
+                    },
+                    {
+                        "name": "location",
+                        "in": "query",
+                        "description": "location as a string",
+                        "required": true
+                    },
+                    {
+                        "name": "mobile",
+                        "in": "query",
+                        "description": "mobile phone number of location",
+                        "required": true
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "description": "description of location",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "insert a new location with above inputs"
+                    }
+                }
+            }
+        },
+        "/display_venue": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\API\\VenueController::display_venue",
+                "parameters": [
+                    {
+                        "name": "latitude",
+                        "in": "query",
+                        "description": "location latitude",
+                        "required": true
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "query",
+                        "description": "location longitude",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "display a specific venue"
+                    }
+                }
+            }
+        }
+    }
+}
